@@ -11,7 +11,7 @@
      TextView txtCounter;
      Button btn_start,btn_stop;
      int count=0;
-     Handler customHandler=new Handler();
+     Handler customHandler = new Handler();
      @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
@@ -33,7 +33,8 @@
          });
      }
 
-     private final Runnable updateTimerThread =new Runnable() { @Override
+     private final Runnable updateTimerThread = new Runnable() { 
+     @Override
      public void run() {
          txtCounter.setText(""+count);
          customHandler.postDelayed(this,1000);

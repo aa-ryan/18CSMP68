@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 public class MainActivity extends AppCompatActivity {
     TextView display;
     @Override
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document=documentBuilder.parse(is);
             StringBuilder stringBuilder=new StringBuilder();
-            stringBuilder.append("XML DATA"); stringBuilder.append("\n-------------");
+            stringBuilder.append("XML DATA"); 
+            stringBuilder.append("\n-------------");
             NodeList nodeList=document.getElementsByTagName("place");
             for(int i=0; i<nodeList.getLength();i++){
                 Node node = nodeList.item(i);
